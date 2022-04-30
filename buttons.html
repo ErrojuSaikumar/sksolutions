@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Cursive;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color:8008000 ;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<p> <b> Click on the Cities details will show. </b> </p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Hyderabad')" id="defaultOpen">Hyderabad</button>
+  <button class="tablinks" onclick="openCity(event, 'Chennai')">Chennai</button>
+  <button class="tablinks" onclick="openCity(event, 'Banglore')">Banglore</button>
+  <button class="tablinks" onclick="openCity(event, 'Kolkata')">Kolkata</button>
+  <button class="tablinks" onclick="openCity(event, 'Delhi')">Delhi</button>
+  <button class="tablinks" onclick="openCity(event, 'Vishakhapatnam')">Vishakhapatnam</button>
+  <button class="tablinks" onclick="openCity(event, 'Pune')">Pune</button>
+  <button class="tablinks" onclick="openCity(event, 'Nagpur')">Nagpur</button>
+  <button class="tablinks" onclick="openCity(event, 'Chandigarh')">Chandigarh</button>
+</div>
+
+<div id="Hyderabad" class="tabcontent">
+  <h3>SAIKUMAR</h3>
+  <p>Saikumar FROM:Hyderabad,MAIL:saikumare0405@gmail.com.</p>
+</div>
+
+<div id="Chennai" class="tabcontent">
+  <h3>Dinesh</h3>
+  <p>FROM: ChennaiMAIL:dinesh123@gmail.com.</p> 
+</div>
+
+<div id="Banglore" class="tabcontent">
+  <h3>Anand</h3>
+  <p>Anand kashuap FROM:Medak MAIL:anandkashuap37@gmail.com.</p>
+</div>
+
+<div id="Kolkata" class="tabcontent">
+  <h3>Praveen</h3>
+  <p>Paraveen FROM:Kolkata,MAIL:Paraveen@gmail.com.</p>
+</div>
+<div id="Delhi" class="tabcontent">
+  <h3>Delhi</h3>
+  <p>Srikanth FROM:NewDelhi,MAIL:srikanth@gmail.com.</p>
+</div>
+<div id="Vishakhapatnam" class="tabcontent">
+  <h3>Kalyan</h3>
+  <p>SKalyan FROM:Vishakapatnam,MAIL:kalyan@gmail.com.</p>
+</div>
+<div id="Pune" class="tabcontent">
+  <h3>Ravi</h3>
+  <p>Ravi FROM:Pune,MAIL: Ravi@gmail.com.</p>
+</div>
+<div id="Nagpur" class="tabcontent">
+  <h3>Venkatesh</h3>
+  <p>Venkatesh FROM:HYDERABAD,MAIL: venkatesh@gmail.com.</p>
+</div>
+<div id="Chandigarh" class="tabcontent">
+  <h3>Candigarh</h3>
+  <p>Chaitanya FROM: Chandigarh,MAIL: chaitanya@gmail.com.</p>
+</div>
+<div id="Paras" class="tabcontent">
+  <h3>Paras</h3>
+  <p>Paras FROM:HYDERABAD,MAIL:Paras@gmail.com.</p>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
